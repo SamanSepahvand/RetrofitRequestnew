@@ -86,7 +86,7 @@ public class ActivitySignUp extends AppCompatActivity {
 
         ///set argument
         ApiInterface apiInterface= ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call <RegisterResponse> call=apiInterface.registerPersonnel(register);
+        Call <RegisterResponse> call=apiInterface.registerPersonnel("application/json",register);
 
 
         ///call retrofit methods

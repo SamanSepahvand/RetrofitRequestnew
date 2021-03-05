@@ -40,12 +40,8 @@ public class PhoneAuthentication extends AppCompatActivity {
         btnResend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                     ///fill  api/request
-                String PhoneNumber="09399895811";
-
-
+                String PhoneNumber="09910167280";
                     ///set argument
                     ApiInterface apiInterface= ApiClient.getRetrofitInstance().create(ApiInterface.class);
                     Call<ErrorLogin> call=apiInterface.resendCode(PhoneNumber);
@@ -60,8 +56,7 @@ public class PhoneAuthentication extends AppCompatActivity {
 
                             if (response.isSuccessful()){
                                 Log.e(TAG, "onResponse isSuccessful(): "+response.body() );
-                                ErrorLogin model=response.body();
-                                //  logData(model);
+
 
                             }else{
 
@@ -87,10 +82,10 @@ public class PhoneAuthentication extends AppCompatActivity {
 
         ///fill  api/request
         final PersonnelRegister register=new PersonnelRegister();
-        register.setFirst_name("string");
-        register.setLast_name("string");
-        register.setCellphone("09399895811");
-        register.setEmail("string");
+        register.setFirst_name("saman2");
+        register.setLast_name("sepahvand2");
+        register.setCellphone("09910167280");
+        register.setEmail("strin22g@gmail.com");
         register.setGender("male");
         
   
@@ -110,7 +105,7 @@ public class PhoneAuthentication extends AppCompatActivity {
                 if (response.isSuccessful()){
                     Log.e(TAG, "onResponse isSuccessful(): "+response.body() );
                     RegisterResponse model=response.body();
-                  //  logData(model);
+                      logData(model);
 
                 }else{
 
@@ -140,7 +135,14 @@ public class PhoneAuthentication extends AppCompatActivity {
         Log.e(TAG, "responseError message : "+responseError.error.message );
 
     }
-    private void logData(RegisterResponse mode){
+    private void logData(RegisterResponse model){
+        Log.e(TAG, "showData id: "+model.id );
+        Log.e(TAG, "showData first_name: "+model.first_name );
+        Log.e(TAG, "showData last_name: "+model.last_name );
+        Log.e(TAG, "showData cellphone: "+model.cellphone );
+        Log.e(TAG, "showData password: "+model.password );
+        Log.e(TAG, "showData username: "+model.username);
+        Log.e(TAG, "showData gender: "+model.gender );
 
     }
 

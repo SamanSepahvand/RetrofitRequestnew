@@ -12,6 +12,19 @@ public class LoginResponse {
     @Expose
     public String token;
 
+
+    @SerializedName("username")
+    @Expose
+    public String username;
+
+
+
+    @SerializedName("password")
+    @Expose
+    public String password;
+
+
+
     @SerializedName("avatar")
     @Expose
     public Object avatar;
