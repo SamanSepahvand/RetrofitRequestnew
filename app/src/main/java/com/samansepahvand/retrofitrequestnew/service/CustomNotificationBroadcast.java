@@ -154,6 +154,8 @@ public class CustomNotificationBroadcast extends BroadcastReceiver {
         }
 
 
+
+
         NotificationCompat.BigTextStyle bStyle = new NotificationCompat.BigTextStyle()
                 .setBigContentTitle("موفقیت اتفاقی نیست");
 
